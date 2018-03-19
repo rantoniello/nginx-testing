@@ -1,0 +1,56 @@
+\hypertarget{structngx__http__tcdn__webcache__loc__conf__s}{}\section{ngx\+\_\+http\+\_\+tcdn\+\_\+webcache\+\_\+loc\+\_\+conf\+\_\+s Struct Reference}
+\label{structngx__http__tcdn__webcache__loc__conf__s}\index{ngx\+\_\+http\+\_\+tcdn\+\_\+webcache\+\_\+loc\+\_\+conf\+\_\+s@{ngx\+\_\+http\+\_\+tcdn\+\_\+webcache\+\_\+loc\+\_\+conf\+\_\+s}}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+ngx\+\_\+uint\+\_\+t \hyperlink{structngx__http__tcdn__webcache__loc__conf__s_a9730c60ca294166a96154e7ada19a3ec}{bucket\+\_\+json\+\_\+refresh\+\_\+period\+\_\+secs}
+\item 
+uint64\+\_\+t \hyperlink{structngx__http__tcdn__webcache__loc__conf__s_a3ea999ac7a3d6d325d3101658677706c}{bucket\+\_\+json\+\_\+monot\+\_\+ts\+\_\+secs}
+\item 
+ngx\+\_\+pool\+\_\+t $\ast$ \hyperlink{structngx__http__tcdn__webcache__loc__conf__s_a94064da09d7e03102f9906f20b139e6e}{pool}
+\item 
+ngx\+\_\+thread\+\_\+pool\+\_\+t $\ast$ \hyperlink{structngx__http__tcdn__webcache__loc__conf__s_a45fb29b1a518f86433416c1798d6bef9}{ngx\+\_\+thread\+\_\+pool}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+T\+C\+D\+N-\/webcache module\textquotesingle{}s location configuration context structure. The fields in this structure are thought to be initially configured through Nginx\textquotesingle{}s configuration file, and lately by any other dynamic run-\/time mean. Apart from configurations settings, this structure will also hold status or data fields to be used persistently by this module. 
+
+Definition at line 65 of file ngx\+\_\+http\+\_\+tcdn\+\_\+webcache\+\_\+module.\+c.
+
+
+
+\subsection{Member Data Documentation}
+\index{ngx\+\_\+http\+\_\+tcdn\+\_\+webcache\+\_\+loc\+\_\+conf\+\_\+s@{ngx\+\_\+http\+\_\+tcdn\+\_\+webcache\+\_\+loc\+\_\+conf\+\_\+s}!bucket\+\_\+json\+\_\+monot\+\_\+ts\+\_\+secs@{bucket\+\_\+json\+\_\+monot\+\_\+ts\+\_\+secs}}
+\index{bucket\+\_\+json\+\_\+monot\+\_\+ts\+\_\+secs@{bucket\+\_\+json\+\_\+monot\+\_\+ts\+\_\+secs}!ngx\+\_\+http\+\_\+tcdn\+\_\+webcache\+\_\+loc\+\_\+conf\+\_\+s@{ngx\+\_\+http\+\_\+tcdn\+\_\+webcache\+\_\+loc\+\_\+conf\+\_\+s}}
+\subsubsection[{\texorpdfstring{bucket\+\_\+json\+\_\+monot\+\_\+ts\+\_\+secs}{bucket_json_monot_ts_secs}}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t ngx\+\_\+http\+\_\+tcdn\+\_\+webcache\+\_\+loc\+\_\+conf\+\_\+s\+::bucket\+\_\+json\+\_\+monot\+\_\+ts\+\_\+secs}\hypertarget{structngx__http__tcdn__webcache__loc__conf__s_a3ea999ac7a3d6d325d3101658677706c}{}\label{structngx__http__tcdn__webcache__loc__conf__s_a3ea999ac7a3d6d325d3101658677706c}
+Monotonic time-\/stamp, in seconds, indicating the date when \textquotesingle{}bucket.\+json\textquotesingle{} was updated for the last time. If this value is older than a specific refresh period, the bucket should be requested and parsed again. 
+
+Definition at line 76 of file ngx\+\_\+http\+\_\+tcdn\+\_\+webcache\+\_\+module.\+c.
+
+\index{ngx\+\_\+http\+\_\+tcdn\+\_\+webcache\+\_\+loc\+\_\+conf\+\_\+s@{ngx\+\_\+http\+\_\+tcdn\+\_\+webcache\+\_\+loc\+\_\+conf\+\_\+s}!bucket\+\_\+json\+\_\+refresh\+\_\+period\+\_\+secs@{bucket\+\_\+json\+\_\+refresh\+\_\+period\+\_\+secs}}
+\index{bucket\+\_\+json\+\_\+refresh\+\_\+period\+\_\+secs@{bucket\+\_\+json\+\_\+refresh\+\_\+period\+\_\+secs}!ngx\+\_\+http\+\_\+tcdn\+\_\+webcache\+\_\+loc\+\_\+conf\+\_\+s@{ngx\+\_\+http\+\_\+tcdn\+\_\+webcache\+\_\+loc\+\_\+conf\+\_\+s}}
+\subsubsection[{\texorpdfstring{bucket\+\_\+json\+\_\+refresh\+\_\+period\+\_\+secs}{bucket_json_refresh_period_secs}}]{\setlength{\rightskip}{0pt plus 5cm}ngx\+\_\+uint\+\_\+t ngx\+\_\+http\+\_\+tcdn\+\_\+webcache\+\_\+loc\+\_\+conf\+\_\+s\+::bucket\+\_\+json\+\_\+refresh\+\_\+period\+\_\+secs}\hypertarget{structngx__http__tcdn__webcache__loc__conf__s_a9730c60ca294166a96154e7ada19a3ec}{}\label{structngx__http__tcdn__webcache__loc__conf__s_a9730c60ca294166a96154e7ada19a3ec}
+Specifies the refresh period, in seconds, for the \textquotesingle{}bucket.\+json\textquotesingle{}. 
+
+Definition at line 69 of file ngx\+\_\+http\+\_\+tcdn\+\_\+webcache\+\_\+module.\+c.
+
+\index{ngx\+\_\+http\+\_\+tcdn\+\_\+webcache\+\_\+loc\+\_\+conf\+\_\+s@{ngx\+\_\+http\+\_\+tcdn\+\_\+webcache\+\_\+loc\+\_\+conf\+\_\+s}!ngx\+\_\+thread\+\_\+pool@{ngx\+\_\+thread\+\_\+pool}}
+\index{ngx\+\_\+thread\+\_\+pool@{ngx\+\_\+thread\+\_\+pool}!ngx\+\_\+http\+\_\+tcdn\+\_\+webcache\+\_\+loc\+\_\+conf\+\_\+s@{ngx\+\_\+http\+\_\+tcdn\+\_\+webcache\+\_\+loc\+\_\+conf\+\_\+s}}
+\subsubsection[{\texorpdfstring{ngx\+\_\+thread\+\_\+pool}{ngx_thread_pool}}]{\setlength{\rightskip}{0pt plus 5cm}ngx\+\_\+thread\+\_\+pool\+\_\+t$\ast$ ngx\+\_\+http\+\_\+tcdn\+\_\+webcache\+\_\+loc\+\_\+conf\+\_\+s\+::ngx\+\_\+thread\+\_\+pool}\hypertarget{structngx__http__tcdn__webcache__loc__conf__s_a45fb29b1a518f86433416c1798d6bef9}{}\label{structngx__http__tcdn__webcache__loc__conf__s_a45fb29b1a518f86433416c1798d6bef9}
+Pointer to module\textquotesingle{}s thread-\/pool. To enable Nginx\textquotesingle{}s thread pool support, Nginx core {\itshape M\+U\+ST} be compiled with the configuration option \textquotesingle{}--with-\/threads\textquotesingle{}. The pool is used for multi-\/threaded blocking tasks (e.\+g. reading and sending of files) without blocking worker processes. 
+
+Definition at line 91 of file ngx\+\_\+http\+\_\+tcdn\+\_\+webcache\+\_\+module.\+c.
+
+\index{ngx\+\_\+http\+\_\+tcdn\+\_\+webcache\+\_\+loc\+\_\+conf\+\_\+s@{ngx\+\_\+http\+\_\+tcdn\+\_\+webcache\+\_\+loc\+\_\+conf\+\_\+s}!pool@{pool}}
+\index{pool@{pool}!ngx\+\_\+http\+\_\+tcdn\+\_\+webcache\+\_\+loc\+\_\+conf\+\_\+s@{ngx\+\_\+http\+\_\+tcdn\+\_\+webcache\+\_\+loc\+\_\+conf\+\_\+s}}
+\subsubsection[{\texorpdfstring{pool}{pool}}]{\setlength{\rightskip}{0pt plus 5cm}ngx\+\_\+pool\+\_\+t$\ast$ ngx\+\_\+http\+\_\+tcdn\+\_\+webcache\+\_\+loc\+\_\+conf\+\_\+s\+::pool}\hypertarget{structngx__http__tcdn__webcache__loc__conf__s_a94064da09d7e03102f9906f20b139e6e}{}\label{structngx__http__tcdn__webcache__loc__conf__s_a94064da09d7e03102f9906f20b139e6e}
+Pointer to module\textquotesingle{}s dynamic memory pool. 
+
+Definition at line 83 of file ngx\+\_\+http\+\_\+tcdn\+\_\+webcache\+\_\+module.\+c.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ngx__http__tcdn__webcache__module_8c}{ngx\+\_\+http\+\_\+tcdn\+\_\+webcache\+\_\+module.\+c}\end{DoxyCompactItemize}

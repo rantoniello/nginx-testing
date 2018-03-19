@@ -1,0 +1,53 @@
+\subsection*{Introduction}
+
+This module serves as a learning exercise for me, and hopefully for others too, when doing \href{http://nginx.org}{\tt Nginx} module development.
+
+I \href{http://dominicfallows.com/2011/02/20/hello-world-nginx-module-3/}{\tt stole} the code and added some notes using mostly Evan Miller\textquotesingle{}s \href{http://www.evanmiller.org/nginx-modules-guide.html}{\tt Nginx Module Development Guide}. Also helpful is the \href{http://antoine.bonavita.free.fr/nginx_mod_dev_en.html}{\tt translation} of Vhalery Kholodov\textquotesingle{}s \href{http://www.grid.net.ru/nginx/nginx-modules.html}{\tt Nginx Module Guide} done by \href{http://antoine.bonavita.free.fr/}{\tt Antoine Bonavita} that also mantains a \href{http://www.nginx-discovery.com/}{\tt Nginx Discovery} blog to document his journey on Nginx module development.
+
+\subsection*{Installation}
+
+
+\begin{DoxyEnumerate}
+\item Configure Nginx adding this module with\+: \begin{DoxyVerb}./configure (...) --add-module=/path/to/nginx-hello-world-module
+\end{DoxyVerb}
+
+\item Build Nginx as usual with {\ttfamily make}.
+\item Configure the module. There\textquotesingle{}s only one directive {\ttfamily hello\+\_\+world} that is supported in the {\bfseries location} context only.
+
+Example\+: \begin{DoxyVerb}location = /test {
+
+   hello_world;
+
+}
+\end{DoxyVerb}
+
+
+Now doing something like\+: \begin{DoxyVerb}curl -i http://example.com/test
+\end{DoxyVerb}
+
+
+should return the {\bfseries hello world} string as the response body.
+\end{DoxyEnumerate}
+
+\subsection*{Further reading}
+
+
+\begin{DoxyItemize}
+\item English\+: You can go to the \href{http://planet.nginx.org/}{\tt Nginx Planet} and get a lot of Nginx related information.
+\item Russian\+: The \href{habrahabr.ru/blogs/nginx/}{\tt Habrahabr Nginx Blog} a treasure trove of Nginx related discussions. Use google translate or Babelfish if you don\textquotesingle{}t read Russian.
+\end{DoxyItemize}
+
+\subsection*{T\+O\+DO}
+
+
+\begin{DoxyEnumerate}
+\item Add an argument to the {\ttfamily hello\+\_\+world} directive specifying the language. For example\+:
+\begin{DoxyItemize}
+\item en\+: hello world
+\item fr\+: bounjour monde
+\item pt\+: olá mundo
+\item es\+: hola mundo
+\end{DoxyItemize}
+\item Make the {\ttfamily hello\+\_\+world} directive be also defined in the {\bfseries if in location} context ({\ttfamily N\+G\+X\+\_\+\+H\+T\+T\+P\+\_\+\+L\+I\+F\+\_\+\+C\+O\+NF}) in {\ttfamily ngx\+\_\+http\+\_\+config.\+h}. Which implies defining a {\bfseries merge configuration} function.
+\item Document everything with \href{https://secure.wikimedia.org/wikipedia/en/wiki/Doxygen}{\tt Doxygen} linking the relevant header and source files from the Nginx core. 
+\end{DoxyEnumerate}
